@@ -15,7 +15,6 @@ const AddTransaction = () => {
     event.preventDefault()
 
     const transaction = {
-      id: Math.floor(Math.random() * 100000000),
       text,
       amount: +amount
     }

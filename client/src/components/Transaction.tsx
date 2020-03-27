@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalContext, TransactionType } from '../context/GlobalState'
 
-const Transaction: React.FC<TransactionType> = ({ text, amount, id }) => {
+const Transaction: React.FC<TransactionType> = ({ text, amount, _id }) => {
   const { deleteTransaction } = useContext(GlobalContext)
 
   const sign = amount < 0 ? '-' : '+'
@@ -14,7 +14,7 @@ const Transaction: React.FC<TransactionType> = ({ text, amount, id }) => {
       </span>
       <button
         type="button"
-        onClick={() => deleteTransaction(id)}
+        onClick={() => deleteTransaction(_id)}
         className="detele-btn"
       >
         x
